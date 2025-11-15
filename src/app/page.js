@@ -25,16 +25,16 @@ export default function Home() {
 
   return (
     <div>
-      <nav className="bg-[#000000] w-full h-15 flex text-[#ffffff] items-center justify-evenly fixed top-0 z-10">
+      <nav className="bg-[#000000] w-full h-15 flex text-[#ffffff] items-center justify-evenly top-0 z-10">
         <button className=" hidden md:block font-bold bg-[#ffffff]  rounded-4xl h-10 px-4 text-[#000000]  ">
           Sign Up
         </button>
-        <img src="/food-traffik-logo.png" />
+        <img className="h-50" src="/food-traffik-logo.png" />
         <button className=" hidden md:block font-bold bg-[#f9041a]  rounded-4xl h-10 px-4 text-[#ffffff] ">
           Sign Up
         </button>
-        <button onClick={openBar} className="w-10 h-10 invert md:hidden">
-          <img src="/ft-menu.png" />
+        <button onClick={openBar} className="sm:w-full sm:h-full object-contain md:hidden">
+          <img src="/icons8-hamburger-menu-24.png" />
         </button>
       </nav>
       
@@ -47,6 +47,7 @@ export default function Home() {
           <span className="bg-[#ffffff] rounded-full flex justify-around p-5 mt-2">
             <img src="/beacon.png" />
             <input
+               type="text"
               className="outline-none"
               placeholder="Enter Your Address..."
             ></input>
