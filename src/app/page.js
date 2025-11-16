@@ -113,7 +113,7 @@ export default function Home() {
       </div>}
 
 
-      <div className=" flex justify-evenly items-center mt-5 mb-10 overflow-x-scroll md:flex justify-evenly items-center mt-5 mb-10">
+      <div className=" flex space-x-10 items-center mt-5 mb-10 overflow-x-scroll md:flex justify-evenly items-center mt-5 mb-10">
         <div className="flex flex-col items-center">
           <button onClick={riceMenu} className="bg-white/10 shadow-sm shadow-black rounded-full p-2 transform hover:scale-95 transition duration-500 hover:shadow-lg">
             <img src="/rice.png" />
