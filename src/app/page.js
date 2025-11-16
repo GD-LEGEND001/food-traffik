@@ -124,7 +124,7 @@ export default function Home() {
           <button className="bg-white/10 shadow-sm shadow-black rounded-full p-2 transform hover:scale-95 transition duration-500 hover:shadow-lg">
             <img src="/sea-food.png" />
           </button>
-          <p className="text-lg text-[#000000] font-semibold">Sea food</p>
+          <p className="text-lg text-[#000000] font-semibold">f</p>
         </div>
         <div className="flex flex-col items-center">
           <button className="bg-white/10 shadow-sm shadow-black rounded-full p-2 transform hover:scale-95 transition duration-500 hover:shadow-lg">
