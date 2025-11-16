@@ -102,7 +102,7 @@ export default function Home() {
         What's on your mind?
       </p>
       {rice && <div className="h-70 w-70 bg-[#000000] block mx-auto rounded-4xl p-2 ">
-            <button onClick={riceMenu}><img className="block ml-70" src="/cancel-btn.png"/></button>
+            <button onClick={riceMenu}><img className="block ml-60" src="/cancel-btn.png"/></button>
             <p className="font-bold text-3xl text-white">Rice</p>
             <p className="text-white font-light text-xl text-center">How many rice do you want</p>
             <div className="flex justify-evenly mt-10">
@@ -113,7 +113,7 @@ export default function Home() {
       </div>}
 
 
-      <div className="md:flex justify-evenly items-center mt-5 mb-10">
+      <div className=" flex justify-evenly items-center mt-5 mb-10 overflow-x-scroll md:flex justify-evenly items-center mt-5 mb-10">
         <div className="flex flex-col items-center">
           <button onClick={riceMenu} className="bg-white/10 shadow-sm shadow-black rounded-full p-2 transform hover:scale-95 transition duration-500 hover:shadow-lg">
             <img src="/rice.png" />
