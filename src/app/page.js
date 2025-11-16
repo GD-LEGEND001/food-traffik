@@ -113,27 +113,30 @@ export default function Home() {
       </div>}
 
 
-      <div className=" flex space-x-10 items-center mt-5 mb-10 overflow-x-scroll overflow-y-scroll overflow-auto md:flex justify-evenly items-center mt-5 mb-10">
+      <div className="flex gap-10 items-center mt-5 mb-10 overflow-x-auto px-4 md:justify-center">
+
+  <div className="flex flex-col items-center flex-shrink-0">
+    <button onClick={riceMenu} className="bg-white/10 shadow-sm shadow-black rounded-full p-2 transform hover:scale-95 transition duration-500 hover:shadow-lg">
+      <img className="w-12 h-12 object-contain" src="/rice.png" />
+    </button>
+    <p className="text-lg text-[#000000] font-semibold">Rice</p>
+  </div>
+
+  <div className="flex flex-col items-center flex-shrink-0">
+    <button className="bg-white/10 shadow-sm shadow-black rounded-full p-2 transform hover:scale-95 transition duration-500 hover:shadow-lg">
+      <img className="w-12 h-12 object-contain" src="/sea-food.png" />
+    </button>
+    <p className="text-lg text-[#000000] font-semibold">Sushi</p>
+  </div>
+
+  <div className="flex flex-col items-center flex-shrink-0">
+    <button className="bg-white/10 shadow-sm shadow-black rounded-full p-2 transform hover:scale-95 transition duration-500 hover:shadow-lg">
+      <img className="w-12 h-12 object-contain" src="/pizza.png" />
+    </button>
+    <p className="text-lg text-[#000000] font-semibold">Pizza</p>
+  </div>
         <div className="flex flex-col items-center">
-          <button onClick={riceMenu} className="bg-white/10 shadow-sm shadow-black rounded-full p-2 transform hover:scale-95 transition duration-500 hover:shadow-lg">
-            <img src="/rice.png" />
-          </button>
-          <p className="text-lg text-[#000000] font-semibold">Rice</p>
-        </div>
-        <div className="flex flex-col items-center">
-          <button className="bg-white/10 shadow-sm shadow-black rounded-full p-2 transform hover:scale-95 transition duration-500 hover:shadow-lg">
-            <img src="/sea-food.png" />
-          </button>
-          <p className="text-lg text-[#000000] font-semibold">sushi</p>
-        </div>
-        <div className="flex flex-col items-center">
-          <button className="bg-white/10 shadow-sm shadow-black rounded-full p-2 transform hover:scale-95 transition duration-500 hover:shadow-lg">
-            <img src="/pizza.png" />
-          </button>
-          <p className="text-lg text-[#000000] font-semibold">Pizza</p>
-        </div>
-        <div className="flex flex-col items-center">
-          <button className="bg-white/10 shadow-sm shadow-black rounded-full p-2 transform hover:scale-95 transition duration-500 hover:shadow-lg">
+          <button className="flex-shrink-0 bg-white/10 shadow-sm shadow-black rounded-full p-2 transform hover:scale-95 transition duration-500 hover:shadow-lg">
             <img src="/pasta.png" />
           </button>
           <p className="text-lg text-[#000000] font-semibold">Pasta</p>
