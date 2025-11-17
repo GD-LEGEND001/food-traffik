@@ -1,8 +1,12 @@
 "use client";
+import {useRouter }from "next/navigation";
 import { useState } from "react";
 import Image from "next/image";
 
+
 export default function Home() {
+  const router = useRouter();
+
   const [sideBar, setSideBar] = useState(false);
   function openBar() {
     setSideBar(!sideBar);
@@ -26,8 +30,12 @@ const [order, trackOrder] = useState(false)
  function setOrder(){
     trackOrder(!order)
  }
+ const [submit, setSubmit] = useState(false)
+  function handleSubmit(){
+    router.push('/track')
+  }
   return (
-    <div>
+    <div>         
       <nav className="bg-[#000000] w-full h-15 flex text-[#ffffff] items-center justify-evenly top-0 z-10">
         <button className=" hidden md:block font-bold bg-[#ffffff]  rounded-4xl h-10 px-4 text-[#000000]  ">
           Sign Up
@@ -76,6 +84,7 @@ const [order, trackOrder] = useState(false)
             </button>
           </div>
         </div>
+
         <div className="flex">
           <div className="bg-white/10 rounded-4xl shadow overflow-hidden  h-90 w-60 transform hover:scale-105 hover:shadow-lg shadow-black transition transition-size-3">
             <img className="w-[100vh] h-[30vh]" src="/Beef-burger.jpeg" />
@@ -101,11 +110,6 @@ const [order, trackOrder] = useState(false)
           </div>
         </div>
       </div>
-      {order && <div className="h-70 w-70 bg-[#000000] block mx-auto rounded-4xl p-2 ">
-            <button onClick={setOrder}><img className="block ml-60" src="/cancel-btn.png"/></button>
-            <p className="font-bold text-3xl text-white">Order Placed!</p>
-            <p className="text-white font-light text-xl text-center">Your order is being processed. You'll receive a notification shortly.</p>
-      </div>}
       <p className="font-extarbold text-4xl text-[#f9041a] text-center mt-5">
         What's on your mind?
       </p>
@@ -169,6 +173,17 @@ const [order, trackOrder] = useState(false)
         </div>
       </div>
       <p className="text-center text-4xl font-bold text-[#f9041a]">Popular Meals</p>
+      
+      {order && <div className="inset-0 fixed z-[9999] backdrop-blur-sm flex justify-center items-center bg-black/30 ">
+        <div className="h-100 w-100 bg-white rounded-4xl p-5 flex flex-col items-center">
+          <button className="ml-auto" onClick={setOrder}><img src="/cancel-btn.png"/></button>
+          <p className="font-bold text-lg text-center">Please fill form to continue with your order!</p>
+          <input className="border-2 border-black rounded-4xl mt-5 p-2 outline-none  text-[#000000] " type="text" placeholder="Full Name"/>
+          <input className="border-2 border-black rounded-4xl mt-5 p-2 outline-none  text-[#000000]" type="text" placeholder="Phone Number"/>
+          <input className="border-2 border-black rounded-4xl mt-5 p-2 outline-none  text-[#000000]" type="text" placeholder="Delivery Address"/>
+          <button onClick={handleSubmit} className="bg-[#f9041a] text-white rounded-4xl h-10 w-30 mt-5">Submit</button>
+        </div>
+        </div>}
     </div>
   );
 }
