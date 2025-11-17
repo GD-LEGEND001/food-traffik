@@ -22,7 +22,10 @@ export default function Home() {
     setCount(count - 1)
     }
   }
-
+const [order, trackOrder] = useState(false)
+ function setOrder(){
+    trackOrder(!order)
+ }
   return (
     <div>
       <nav className="bg-[#000000] w-full h-15 flex text-[#ffffff] items-center justify-evenly top-0 z-10">
@@ -68,7 +71,7 @@ export default function Home() {
           <div className="flex flex-col items-center">
             <p>small chops</p>
             <p className="text-green-500 ">₦2200</p>
-            <button className="rounded-4xl bg-[#f9041a] text-[#ffffff] h-10 w-30">
+            <button onClick={setOrder} className="rounded-4xl bg-[#f9041a] text-[#ffffff] h-10 w-30">
               Order Now
             </button>
           </div>
@@ -98,6 +101,11 @@ export default function Home() {
           </div>
         </div>
       </div>
+      {order && <div className="h-70 w-70 bg-[#000000] block mx-auto rounded-4xl p-2 ">
+            <button onClick={setOrder}><img className="block ml-60" src="/cancel-btn.png"/></button>
+            <p className="font-bold text-3xl text-white">Order Placed!</p>
+            <p className="text-white font-light text-xl text-center">Your order is being processed. You'll receive a notification shortly.</p>
+      </div>}
       <p className="font-extarbold text-4xl text-[#f9041a] text-center mt-5">
         What's on your mind?
       </p>
@@ -135,13 +143,13 @@ export default function Home() {
     </button>
     <p className="text-lg text-[#000000] font-semibold">Pizza</p>
   </div>
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center flex-shrink-0">
           <button className="flex-shrink-0 bg-white/10 shadow-sm shadow-black rounded-full p-2 transform hover:scale-95 transition duration-500 hover:shadow-lg">
             <img src="/pasta.png" />
           </button>
-          <p className="text-lg text-[#000000] font-semibold">Pasta</p>
+          <p className="text-lg text-[#000000] font-semibold ">Pasta</p>
         </div>
-        <div className="flex flex-col items-center">
+        <div className="flex flex-col items-center flex-shrink-0">
           <button className="bg-white/10 shadow-sm shadow-black rounded-full p-2 transform hover:scale-95 transition duration-500 hover:shadow-lg">
             <img src="/bakery.png" />
           </button>
