@@ -32,7 +32,7 @@ const [order, trackOrder] = useState(false)
  }
  const [submit, setSubmit] = useState(false)
   function handleSubmit(){
-    router.push('/track')
+    router.push("/track")
   }
   return (
     <div>         
